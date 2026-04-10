@@ -1,20 +1,33 @@
 #include <iostream>
-using namespace std;
+#include <string>
 
-int main(){
-    string usuario;
-    string password;
+int main() {
+    std::string usuario;
+    std::string password;
     int opcionMenu;
-    cout << "Introduzca su usuario, por favor." << "\n";
-    cin >> usuario;
-    cout << "Intoduzca su contraseña, por favor." << "\n";
-    cin >> password;
-    if (usuario == "Juan" && password == "NoHay2sin3"){
-    cout << "Bienvenido, " + usuario + "teclee 1 para acceder." << "\n";
-    cin >> opcionMenu;
+
+    std::cout << "Introduzca su usuario:\n";
+    std::cin >> usuario;
+
+    std::cout << "Introduzca su contraseña:\n";
+    std::cin >> password;
+
+    if (usuario == "Juan" && password == "NoHay2sin3") {
+
+        std::cout << "Bienvenido, " << usuario
+                  << ". Teclee 1 para acceder:\n";
+
+        std::cin >> opcionMenu;
+
+        if (opcionMenu == 1) {
+            std::cout << "Accediendo al sistema...\n";
+        } else {
+            std::cout << "Opción inválida.\n";
+        }
+
     } else {
-    cout << "Lo sentimos, datos incorrectos." << "\n";
+        std::cout << "Lo sentimos, datos incorrectos.\n";
     }
-    cin.get();
+
     return 0;
 }
